@@ -59,12 +59,14 @@ export default function HeroSlider() {
   }
 
   return (
-    <div className="lg:container lg:py-6 lg:px-32">
+    <div className="lg:container lg:py-6 xl:px-32">
       <div className="slider-container relative">
         <Slider
           asNavFor={nav2}
           ref={(slider) => (sliderRef1 = slider)}
           speed={900}
+          autoplay={true}
+          pauseOnHover
           nextArrow={<SampleNextArrow />}
           prevArrow={<SamplePrevArrow />}
           responsive={[
@@ -107,7 +109,7 @@ export default function HeroSlider() {
           </div>
         </Slider>
 
-        <div className="bg-white p-4 md:p-10 h-[350px] max-w-[600px] md:absolute top-24 right-0 md:shadow-lg">
+        <div className="bg-white p-5 md:p-10 h-[350px] max-w-full md:max-w-[600px] md:absolute top-36 right-0 md:shadow-lg">
           <Slider
             asNavFor={nav1}
             ref={(slider) => (sliderRef2 = slider)}
